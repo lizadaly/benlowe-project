@@ -1,12 +1,14 @@
-## Used Books reader
-
+# "Used Books"
 A standalone React/Redux web application for exploring unique manuscripts.
+
+## Important note
+This repository archives the beginnings of the Manicule web app, which was a project called Used Books in its first iteration. This repository split into two others: the Manicule app (https://github.com/wtrettien/manicule) and an instance of that app designed to showcase the book Theophila (1652), by Edward Benlowes (https://github.com/wtrettien/theophila). To follow this project, we recommend visiting the repo at: https://github.com/wtrettien/manicule
 
 <img src="https://travis-ci.org/lizadaly/used-books-reader.svg?branch=master" alt="Build status">
 
-# Installation (first time)
+### Installation (first time)
 
-## Mac OS
+#### Mac OS
 
 Install the package manager `brew` by going to https://brew.sh/ and following the instruction from a Terminal window.
 
@@ -27,7 +29,7 @@ npm install
 
 It should run for a long time and then complete.
 
-## Running the application locally (every time)
+### Running the application locally (every time)
 
 ```
 npm start
@@ -35,7 +37,7 @@ npm start
 
 This will run the application as http://localhost:3000/usedbooks/
 
-## Running the test suite
+### Running the test suite
 
 Whenever you make a change, however trivial, it's best to run the test suite to make sure there weren't
 unexpected breakages:
@@ -46,7 +48,7 @@ npm run test
 
 All the tests should pass. If not, don't commit your change to master!
 
-## Deploying the application to production
+### Deploying the application to production
 
 To deploy manually, first _build_ the application, then copy the contents of the build folder:
 
@@ -58,9 +60,9 @@ This will create a folder called `build`. Everything inside that should be copie
 
 
 
-## Updating the data files
+### Updating the data files
 
-### Metadata and structure
+#### Metadata and structure
 Data files pertaining to the structure and metadata of the manuscript itself are in `data`.
 
 Each copy (the code calls these 'editions') will have a folder at the top:
@@ -85,11 +87,11 @@ There is a utility to convert from a CSV to a JSON file in the project:
 
 *index* should begin at 1 and increase for each page.
 
-The names of the categories are mapped to colors; if the category names change or new categories are added, update the color mapping here: https://github.com/lizadaly/used-books-reader/blob/master/app/utils/metadata.js#L8 
+The names of the categories are mapped to colors; if the category names change or new categories are added, update the color mapping here: https://github.com/lizadaly/used-books-reader/blob/master/app/utils/metadata.js#L8
 
 `structure.xml` constains information about the binding structure of the work, including which pages are conjoined or inserted.
 
-### The tour
+#### The tour
 
 The `tour` directory contains information about the tour overlay (rendered as a star on the fascimile and filmstrip view).
 
